@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario Registro</title>
+<link href="../css/estiloformulario1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<form id="form1" name="form1" >
+  <fieldset>
+    <legend>DIRECCION DE ENVIOS</legend>
+    <p>
+      <label for="calle2">Calle Principal</label> 
+      <input type="text" name="calle" id="calle2" />
+    </p>
+    <p>
+      <label for="transversal">Transversal</label> 
+      <input type="text" name="transversal" id="transversal"  />
+    </p>
+    <p>
+      <input type="checkbox" name="propietario" id="propietario" onclick="enableSubmitButton()" />
+      <label for="propietario">Entrega Propietario</label>
+    </p>
+    <p>
+      <input type="checkbox" name="tercero" id="tercero" onclick="showConfidentialInfoForm()" />
+      <label for="tercero">Entrega a un tercero</label>
+    </p>
+    <div id="confidential-info-form" style="display: none;">
+      <fieldset>
+        <legend>INFORMACION CONFIDENCIAL</legend>
+        <p>
+          <label for="codigo">Codigo Postal</label>
+          <input type="text" name="codigo" id="codigo"  />
+        </p>
+        <p>
+          <label for="referencia">Referencia de la Direccion</label>
+        </p>
+        <p>
+          <textarea name="referencia" id="referencia" cols="45" rows="5" ></textarea>
+        </p>
+        <p>
+          <input type="button" name="guardar" id="guardar" value="Guardar" />
+        </p>
+      </fieldset>
+    </div>
+    <p>
+      <label for="canton">Cantones</label>
+      <select name="canton" id="canton" >
+        <option value="q">Quito</option>
+        <option value="c">Cayambe</option>
+        <option value="m">Mejía</option>
+        <option value="pm">Pedro Moncayo;</option>
+        <option value="b">Los Bancos</option>
+        <option value="r">Rumiñahui</option>
+        <option value="pvm">Pedro Vicente Maldonado</option>
+        <option value="pm">Pedro Moncayo</option>
+      </select>
+    </p>
+    <p>
+      <input type="button" name="enviar" id="enviar" value="ENVIAR DATOS" disabled />
+    </p>
+  </fieldset>
+</form>
+<script src="../js/checkform1.js"></script>
+</body>
+</html>

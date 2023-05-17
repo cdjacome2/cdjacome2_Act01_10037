@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario Producto</title>
+<link href="../css/estiloformulario1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body1">
+<form id="FormProducto " name="FormProducto">
+  <fieldset>
+    <legend>Datos Basicos</legend>
+    <p>Nombre del Producto
+      <input type="text" name="codigo" id="codigo"  />
+    </p>
+    <p>Descripcion</p>
+    <p>
+      <textarea name="referencia" id="referencia" cols="45" rows="5" ></textarea>
+    </p>
+    <p>Foto</p>
+    <p>
+      <input type="button" name="foto" id="foto" value="Examinar...">
+    </p>
+    <p>
+      <input type="checkbox" name="añadir" id="añadir">
+      <label for="añadir">Añadir informacion personal</label></p></fieldset>
+  
+  <fieldset>
+    <legend>Datos Economicos</legend>
+    <p class="precio-input-container">
+      <label for="precio">Precio</label>
+      <input type="number" name="precio" id="precio" >
+      <span class="precio-symbol">$</span>
+    </p>
+    <p>
+      <label for="impuestos">Impuestos</label>
+      <select name="impuestos" id="impuestos">
+        <option value="1">1%</option>
+        <option value="2">2%</option>
+        <option value="3">3%</option>
+        <option value="4">4%</option>
+      </select>
+    </p>
+    <p>Promocion </p>
+    <p>
+      <input type="radio" name="radio" id="ninguno" value="ninguno">
+      <label for="ninguno">Ninguno</label>
+    </p>
+    <p>
+      <input type="radio" name="radio" id="transporte" value="transporte">
+      <label for="transporte">Transporte Gratuito</label>
+    </p>
+    <p>
+      <input type="radio" name="radio" id="descuento" value="descuento">
+      <label for="descuento">Descuento 5%</label>
+    </p>
+  </fieldset>
+  
+  <p>
+    <input type="button" name="guardar" id="guardar" value="Guardar Cambios">
+    <input type="button" name="borrar" id="borrar" value="Borrar los datos introducidos" onclick="borrarDatos()">
+  </p>
+</form>
+<p>&nbsp;</p>
+<script src="../js/checkform1.js"></script>
+</body>
+</html>
